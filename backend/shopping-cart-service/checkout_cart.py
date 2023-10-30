@@ -14,7 +14,7 @@ metrics = Metrics()
 dynamodb = boto3.resource("dynamodb")
 
 logger.debug("Initializing DDB Table %s", os.environ["TABLE_NAME"])
-table = dynamodb.Table(os.environ["TABLE_NAME"])
+table = dynamodb.Table("amplify-aws-serverless-shopping-cart-shoppingcart-service-DynamoDBShoppingCartTable-10FXG2YGDBN55")
 
 
 @metrics.log_metrics(capture_cold_start_metric=True)

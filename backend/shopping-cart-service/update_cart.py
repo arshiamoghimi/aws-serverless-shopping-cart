@@ -1,5 +1,4 @@
 import json
-import os
 
 import boto3
 from aws_lambda_powertools import Logger, Metrics, Tracer
@@ -18,8 +17,8 @@ tracer = Tracer()
 metrics = Metrics()
 
 dynamodb = boto3.resource("dynamodb")
-table = dynamodb.Table(os.environ["TABLE_NAME"])
-product_service_url = os.environ["PRODUCT_SERVICE_URL"]
+table = dynamodb.Table("amplify-aws-serverless-shopping-cart-shoppingcart-service-DynamoDBShoppingCartTable-10FXG2YGDBN55")
+product_service_url = "https://3qbkwmunok.execute-api.us-east-2.amazonaws.com/Prod"
 
 
 @metrics.log_metrics(capture_cold_start_metric=True)

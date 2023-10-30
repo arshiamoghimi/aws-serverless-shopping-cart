@@ -9,7 +9,7 @@ logger = Logger()
 tracer = Tracer()
 
 dynamodb = boto3.resource("dynamodb")
-table = dynamodb.Table(os.environ["TABLE_NAME"])
+table = dynamodb.Table("amplify-aws-serverless-shopping-cart-shoppingcart-service-DynamoDBShoppingCartTable-10FXG2YGDBN55")
 
 deserializer = types.TypeDeserializer()
 

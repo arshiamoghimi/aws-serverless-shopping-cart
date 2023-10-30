@@ -5,7 +5,7 @@ from aws_lambda_powertools import Logger, Tracer
 
 from shared import NotFoundException
 
-product_service_url = os.environ["PRODUCT_SERVICE_URL"]
+product_service_url = "https://3qbkwmunok.execute-api.us-east-2.amazonaws.com/Prod"
 
 logger = Logger()
 tracer = Tracer()
